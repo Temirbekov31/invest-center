@@ -1051,7 +1051,7 @@ ul.language-dropdown li:last-child a {
 }
 
 .hero-bg {
-    background-image: url('../Global-invest-center-master/Investsite/static/NewImage/herbgin.jpg');
+    background-image: url('/static/NewImage/herbgin.jpg');
 
 
 }
@@ -1270,7 +1270,7 @@ a.hero-boxed-btn:hover::after {
 .intro-bg {
     height: 100%;
     background-size: cover;
-    background-image: url('../heroImg/hero1\ \(3\).jpg');
+    background-image: url('../heroImg/hero1.jpg');
 }
 
 
@@ -1480,35 +1480,7 @@ a.contact-btn:hover::after {
     overflow: visible;
 }
 
-.single-case-bg-1 {
-    background-image: url('../NewImage/nft.jpg');
-    background-size: cover;
-}
 
-.single-case-bg-2 {
-    background-image: url('../NewImage/nft.jpg');
-    background-size: cover
-}
-
-.single-case-bg-3 {
-    background-image: url('../NewImage/nft.jpg');
-    background-size: cover
-}
-
-.single-case-bg-4 {
-    background-image: url('../NewImage/nft.jpg');
-    background-size: cover
-}
-
-.single-case-bg-5 {
-    background-image: url('../NewImage/nft.jpg');
-    background-size: cover
-}
-
-.single-case-bg-6 {
-    background-image: url('../NewImage/nft.jpg');
-    background-size: cover
-}
 
 .single-case {
     display: block;

@@ -1444,35 +1444,7 @@ a.contact-btn:hover::after {
     overflow: visible;
 }
 
-.single-case-bg-1 {
-    background-image: url('../NewImage/nft.jpg');
-    background-size: cover;
-}
 
-.single-case-bg-2 {
-    background-image: url('../NewImage/nft.jpg');
-    background-size: cover
-}
-
-.single-case-bg-3 {
-    background-image: url('../NewImage/nft.jpg');
-    background-size: cover
-}
-
-.single-case-bg-4 {
-    background-image: url('../NewImage/nft.jpg');
-    background-size: cover
-}
-
-.single-case-bg-5 {
-    background-image: url('../NewImage/nft.jpg');
-    background-size: cover
-}
-
-.single-case-bg-6 {
-    background-image: url('../NewImage/nft.jpg');
-    background-size: cover
-}
 
 .single-case {
     display: block;
