@@ -33,6 +33,7 @@
    <link rel="stylesheet" href="{% static 'css/style.css'%}">
    <!-- responsive css -->
    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+   <link rel="stylesheet" href="{% static 'css/uicons-regular-rounded/css/uicons-regular-rounded.css' %}" />
    <!-- jquery js -->
    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
 
@@ -74,34 +75,40 @@
       <div class="container">
          <div class="support-bar-area">
             <div class="row">
-               <div class="col-lg-6 support-contact-info">
-                  <span class="address"><i class="flaticon-placeholder"></i> Abdumomunova 220a</span>
-                  <span class="phone"><i class="flaticon-chat"></i> +996 708 899 889</span>
-               </div>
-               <div class="col-lg-6 text-right">
-                  <ul class="social-links">
-                     <li><a href="https://api.whatsapp.com/send?phone=996708899889&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C."><i class="fab fa-whatsapp"></i></a></li>
-                     <li><a href="https://www.instagram.com/invest.center.kg/"><i class="fab fa-instagram"></i></a></li>
-                  </ul>
-                  <div class="language">
-                     <a class="language-btn" href="{% url 'all' %}"><i class="flaticon-worldwide"></i>
-                        English</a>
-                     <ul class="language-dropdown">
-                        <li><a href="{% url 'all_ru' %}">Русский</a></li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <form method="get" action="{% url "all" %}">
-            <div class="input-group col-lg-4 searchBar">
-              <div class="form-outline">
-                <input id="search-focus" type="search" id="form1" class="" placeholder="Search..." name="search" form-control/>
+              <div class="col-lg-4 mt-3 support-contact-info">
+                <span class="address"><i class="flaticon-placeholder"></i>Razakova 33/2</span>
+                <span class="phone"><i class="flaticon-chat"></i> +996 708 899 889</span>
               </div>
-              <button type="submit" class="ml-2" data-bs-toggle="modal" data-bs-target="#exampleModalFilter">
-                <i class="fi-rr-settings-sliders"></i>
+              <div class="col-lg-4 text-right">
+                <ul class="social-links">
+                  <li>
+                    <a href="https://api.whatsapp.com/send?phone=996708899889&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C."><i class="fab fa-whatsapp"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/invest.center.kg/"><i class="fab fa-instagram"></i></a>
+                  </li>
+                </ul>
+                <div class="language">
+                  <a class="language-btn" href="#"><i class="flaticon-worldwide"></i> English</a>
+                  <ul class="language-dropdown">
+                    <li><a href="{% url 'all_ru' %}">Русский</a></li>
+                  </ul>
+                </div>
+              </div>
+              {% csrf_token %}
+              <form method="get" class="col-lg-4 formShearch text-right" action="{% url 'all' %}">
+              <div class="input-group searchBar">
+                <div class="form-outline">
+                  <input id="search-focus" type="search" id="form1" class="" placeholder="Search..." name="search" form-control/>
+                </div>
+                <button type="submit" class="">
+                  <i class="fi-rr-search mr-4"></i></button>
+              </div>
+            </form>
             </div>
-          </form>
+    
+          </div>
+
          <div class="header-navbar">
             <div class="row">
               <div class="col-lg-2 col-6">
@@ -165,7 +172,7 @@
 
 
       <body class="u-body u-xl-mode">
-         <section class="u-clearfix u-hidden-sm u-hidden-xs u-lightbox u-section-1 m-t" id="sec-3274">
+         <section class="u-clearfix u-hidden-sm u-hidden-xs u-lightbox u-section-1 mt-5 mb-5" id="sec-3274">
             <div class="u-clearfix u-sheet u-sheet-1">
                <div class="u-clearfix u-gutter-10 u-layout-wrap u-layout-wrap-1">
                   <div class="u-layout">

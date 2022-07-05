@@ -189,7 +189,7 @@
         position: static;
     }
     ul.slicknav_nav {
-        background-color: rgba(0, 0, 0, 0.823);
+        background-color: #0a3041;
         text-align: left;
         position: absolute;
         top: 106px;
@@ -197,9 +197,6 @@
         width: 100%;
     }
 
-    .slicknav_nav a{
-        border-top: 1px solid #0009ff;
-    }
     .sticky-navbar ul.slicknav_nav {
         top: 89px;
     }
@@ -259,7 +256,7 @@
     }
     .slicknav_nav ul.dropdown-lists {
         margin: 0px 15px;
-        background-color: rgba(0, 0, 0, 0.763);
+        background-color: #0e3e53;
     }
     
     .slicknav_nav ul.dropdown-lists li a {
@@ -1254,7 +1251,6 @@
         color: #fff;
         text-transform: uppercase;
         font-weight: 700;
-        background-color: #0a3041;
         border: none;
         text-decoration: none;
         font-size: 14px;

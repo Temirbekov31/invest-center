@@ -16,7 +16,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
   </script>
-  <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/x-icon" />
+  <link rel="shortcut icon" href="../static/NewImage/FavIcon.png" type="image/x-icon" />
   <!-- bootstrap css -->
   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}" />
   <!-- fontawesome css -->
@@ -51,7 +51,7 @@
       <div class="support-bar-area">
         <div class="row">
           <div class="col-lg-4 mt-3 support-contact-info">
-            <span class="address"><i class="flaticon-placeholder"></i> Abdumunova 220A</span>
+            <span class="address"><i class="flaticon-placeholder"></i>Razakova 33/2</span>
             <span class="phone"><i class="flaticon-chat"></i> +996 708 899 889</span>
           </div>
           <div class="col-lg-4 text-right">
@@ -71,13 +71,13 @@
             </div>
           </div>
           {% csrf_token %}
-          <form method="get" action="{% url 'all' %}">
-          <div class="input-group col-lg-4 searchBar">
+          <form method="get" class="col-lg-4 formShearch text-right" action="{% url 'all' %}">
+          <div class="input-group searchBar">
             <div class="form-outline">
               <input id="search-focus" type="search" id="form1" class="" placeholder="Search..." name="search" form-control/>
             </div>
-            <button type="submit" class="ml-2" data-bs-toggle="modal" data-bs-target="#exampleModalFilter">
-              <i class="fi-rr-settings-sliders"></i>
+            <button type="submit" class="">
+              <i class="fi-rr-search mr-4"></i></button>
           </div>
         </form>
         </div>
@@ -241,12 +241,10 @@
         <div class="row card-body" >
           <div class="col-lg-6 pr-0">
             <div class="intro-txt">
-              <p class="h3">About Us</p>
-              <h2 class="section-summary">
-                We provide development and attract investment. We help solve
+              <p class="h3">About Us AFF</p>
+              <h2 class="section-summary">We provide development and attract investment. We help solve
                 complex tasks at the intersection of business and government
-                relations
-              </h2>
+                relations</h2>
               <a href="{% url 'about' %}" class="intro-btn"><span>learn more</span></a>
             </div>
           </div>
@@ -324,12 +322,8 @@
   <!--   how we do section start   -->
   <div class="container">
     <div class="choose-us">
-      <div class="row">
-        <div class="col-lg-6 col-md-6">
-          <h2 class="section-summary">Our advantage</h2>
-        </div>
-      </div>
-      <div class="row">
+          <h2 class="section-summary text-center">Our advantage</h2>
+      <div class="row ml-3">
         <div class="col-lg-4 col-md-3">
           <div class="single-reason">
             <div class="about-icon-wrapper">
@@ -439,26 +433,28 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body p-0 row">
+      <div class="modal-body">
+        <div class="row">
         {% for project in object_list %}
         {% if project.lang == 'en' %}
         {% if project.region == 'Chuy' %}
         {% if project.photo %}
-        <div class="col-12 col-lg-5 ad p-0">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-6 mt-4">
           <img src="{{ project.photo.url }}" width="100%" height="100%" />
         </div>
         {% endif %}
-        <div class="details col-12 col-lg-7">
+        <div class="details col-lg-6 col-md-6 col-sm-6 col-6 mt-4">
           <h2>{{project.title}}</h2>
           <p>
             <small class="para">{{project.body}}</small>
           </p>
-          <small class="text-muted"><a href="#">Learn more</a></small>
+          <small class="text-muted"><button class="btn btn-primary" href="#">Learn more</button></small>
         </div>
         {% endif %}
         {% endif %}
         {% endfor %}
       </div>
+    </div>
     </div>
   </div>
 </div>
@@ -473,26 +469,28 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body p-0 row">
+      <div class="modal-body">
+        <div class="row">
         {% for project in object_list %}
         {% if project.lang == 'en' %}
         {% if project.region == 'Talas' %}
         {% if project.photo %}
-        <div class="col-12 col-lg-5 ad p-0">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-6 mt-4">
           <img src="{{ project.photo.url }}" width="100%" height="100%" />
         </div>
         {% endif %}
-        <div class="details col-12 col-lg-7">
+        <div class="details col-lg-6 col-md-6 col-sm-6 col-6 mt-4">
           <h2>{{project.title}}</h2>
           <p>
             <small class="para">{{project.body}}</small>
           </p>
-          <small class="text-muted"><a href="#">Learn more</a></small>
+          <small class="text-muted"><button class="btn btn-primary" href="#">Learn more</button></small>
         </div>
         {% endif %}
         {% endif %}
         {% endfor %}
       </div>
+    </div>
     </div>
   </div>
 </div>
@@ -507,26 +505,28 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body p-0 row">
+      <div class="modal-body">
+        <div class="row">
         {% for project in object_list %}
         {% if project.lang == 'en' %}
         {% if project.region == 'Issyk-kul' %}
         {% if project.photo %}
-        <div class="col-12 col-lg-5 ad p-0">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-6 mt-4">
           <img src="{{ project.photo.url }}" width="100%" height="100%" />
         </div>
         {% endif %}
-        <div class="details col-12 col-lg-7">
+        <div class="details col-lg-6 col-md-6 col-sm-6 col-6 mt-4">
           <h2>{{project.title}}</h2>
           <p>
             <small class="para">{{project.body}}</small>
           </p>
-          <small class="text-muted"><a href="#">Learn more</a></small>
+          <small class="text-muted"><button class="btn btn-primary" href="#">Learn more</button></small>
         </div>
         {% endif %}
         {% endif %}
         {% endfor %}
       </div>
+    </div>
     </div>
   </div>
 </div>
@@ -542,26 +542,28 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body p-0 row">
+      <div class="modal-body">
+        <div class="row">
         {% for project in object_list %}
         {% if project.lang == 'en' %}
         {% if project.region == 'Jalal-abad' %}
         {% if project.photo %}
-        <div class="col-12 col-lg-5 ad p-0">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-6 mt-4">
           <img src="{{ project.photo.url }}" width="100%" height="100%" />
         </div>
         {% endif %}
-        <div class="details col-12 col-lg-7">
+        <div class="details col-lg-6 col-md-6 col-sm-6 col-6 mt-4">
           <h2>{{project.title}}</h2>
           <p>
             <small class="para">{{project.body}}</small>
           </p>
-          <small class="text-muted"><a href="#">Learn more</a></small>
+          <small class="text-muted"><button class="btn btn-primary" href="#">Learn more</button></small>
         </div>
         {% endif %}
         {% endif %}
         {% endfor %}
       </div>
+    </div>
     </div>
   </div>
 </div>
@@ -577,26 +579,28 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body p-0 row">
+      <div class="modal-body">
+        <div class="row">
         {% for project in object_list %}
         {% if project.lang == 'en' %}
         {% if project.region == 'Naryn' %}
         {% if project.photo %}
-        <div class="col-12 col-lg-5 ad p-0">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-6 mt-4">
           <img src="{{ project.photo.url }}" width="100%" height="100%" />
         </div>
         {% endif %}
-        <div class="details col-12 col-lg-7">
+        <div class="details col-lg-6 col-md-6 col-sm-6 col-6 mt-4">
           <h2>{{project.title}}</h2>
           <p>
             <small class="para">{{project.body}}</small>
           </p>
-          <small class="text-muted"><a href="#">Learn more</a></small>
+          <small class="text-muted"><button class="btn btn-primary" href="#">Learn more</button></small>
         </div>
         {% endif %}
         {% endif %}
         {% endfor %}
       </div>
+    </div>
     </div>
   </div>
 </div>
@@ -613,26 +617,28 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body p-0 row">
+      <div class="modal-body">
+        <div class="row">
         {% for project in object_list %}
         {% if project.lang == 'en' %}
         {% if project.region == 'Batken' %}
         {% if project.photo %}
-        <div class="col-12 col-lg-5 ad p-0">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-6 mt-4">
           <img src="{{ project.photo.url }}" width="100%" height="100%" />
         </div>
         {% endif %}
-        <div class="details col-12 col-lg-7">
+        <div class="details col-lg-6 col-md-6 col-sm-6 col-6 mt-4">
           <h2>{{project.title}}</h2>
           <p>
             <small class="para">{{project.body}}</small>
           </p>
-          <small class="text-muted"><a href="#">Learn more</a></small>
+          <small class="text-muted"><button class="btn btn-primary" href="#">Learn more</button></small>
         </div>
         {% endif %}
         {% endif %}
         {% endfor %}
       </div>
+    </div>
     </div>
   </div>
 </div>
@@ -648,26 +654,28 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body p-0 row">
+      <div class="modal-body">
+        <div class="row">
         {% for project in object_list %}
         {% if project.lang == 'en' %}
         {% if project.region == 'Osh' %}
         {% if project.photo %}
-        <div class="col-12 col-lg-5 ad p-0">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-6 mt-4">
           <img src="{{ project.photo.url }}" width="100%" height="100%" />
         </div>
         {% endif %}
-        <div class="details col-12 col-lg-7">
+        <div class="details col-lg-6 col-md-6 col-sm-6 col-6 mt-4">
           <h2>{{project.title}}</h2>
           <p>
             <small class="para">{{project.body}}</small>
           </p>
-          <small class="text-muted"><a href="#">Learn more</a></small>
+          <small class="text-muted"><button class="btn btn-primary" href="#">Learn more</button></small>
         </div>
         {% endif %}
         {% endif %}
         {% endfor %}
       </div>
+    </div>
     </div>
   </div>
 </div>
@@ -681,7 +689,7 @@
     >
       <div class="u-clearfix u-sheet u-sheet-1">
         <h5 class="u-text u-text-1 about-text">
-          Основные макроэкономические показатели в январе-марте 2022 года
+          Main macroeconomic indicators in January-March 2022
         </h5>
         <div class="u-expanded-width u-list u-list-1">
           <div class="u-repeater u-repeater-1">
@@ -701,9 +709,9 @@
                 <h5
                   class="u-custom-font u-font-merriweather u-text u-text-default u-text-2"
                 >
-                  Население-6.7<br />
+                Population-6.7<br />
                 </h5>
-                <p class="u-text u-text-3">На 01.03.2022г, млн человек</p>
+                <p class="u-text u-text-3">As of March 1, 2022, million people</p>
               </div>
             </div>
             <div
@@ -722,7 +730,7 @@
                 <h5
                   class="u-custom-font u-font-merriweather u-text u-text-default u-text-4"
                 >
-                  Сельское хозяйство-102.3%
+                Agriculture-102.3%
                 </h5>
                 <p class="u-text u-text-5">text</p>
               </div>
@@ -743,9 +751,9 @@
                 <h5
                   class="u-custom-font u-font-merriweather u-text u-text-default u-text-6"
                 >
-                  Промышленность<br />107.3%
+                Industry<br />107.3%
                 </h5>
-                <p class="u-text u-text-7">Индекс физического объема</p>
+                <p class="u-text u-text-7">Physical volume index</p>
               </div>
             </div>
             <div
@@ -764,10 +772,10 @@
                 <h5
                   class="u-custom-font u-font-merriweather u-text u-text-default u-text-8"
                 >
-                  Экспорт<br />103.8%
+                Export<br />103.8%
                 </h5>
                 <p class="u-text u-text-9">
-                  К январю-февралю&nbsp;<br />2021г в %
+                  By January-February&nbsp;<br />2021г in %
                 </p>
               </div>
             </div>
@@ -787,10 +795,10 @@
                 <h5
                   class="u-custom-font u-font-merriweather u-text u-text-default u-text-10"
                 >
-                  Влоловой внутренний продукт-104.5%
+                GDP-104.5%
                 </h5>
                 <p class="u-text u-text-11">
-                  К январю-марту&nbsp;<br />2021г в %
+                  By January-March&nbsp;<br />2021 in %
                 </p>
               </div>
             </div>
@@ -810,10 +818,10 @@
                 <h5
                   class="u-custom-font u-font-merriweather u-text u-text-default u-text-12"
                 >
-                  Инвестиции в основной капитал<br />100.5%
+                Investments in fixed assets<br />100.5%
                 </h5>
                 <p class="u-text u-text-13">
-                  К январю-марту&nbsp;<br />2021г в %
+                  By January-March&nbsp;<br />2021 in %
                 </p>
               </div>
             </div>
@@ -833,9 +841,9 @@
                 <h5
                   class="u-custom-font u-font-merriweather u-text u-text-default u-text-14"
                 >
-                  Инфляция<br />5.0%
+                Inflation<br />5.0%
                 </h5>
-                <p class="u-text u-text-15">К декабрю 2021г</p>
+                <p class="u-text u-text-15">By December 2021</p>
               </div>
             </div>
             <div
@@ -847,8 +855,8 @@
               <div
                 class="u-container-layout u-similar-container u-valign-middle u-container-layout-8">
                 <span class="u-file-icon u-icon u-text-custom-color-2 u-icon-8"><img src="../static/logoKR/15.png" alt=""/></span>
-                <h5 class="u-custom-font u-font-merriweather u-text u-text-default u-text-16">Импорт<br />191.3%</h5>
-                <p class="u-text u-text-17">К январю-марту&nbsp;<br />2021г в %</p>
+                <h5 class="u-custom-font u-font-merriweather u-text u-text-default u-text-16">Import<br />191.3%</h5>
+                <p class="u-text u-text-17">By January-March&nbsp;<br />2021 in %</p>
               </div>
             </div>
           </div>
@@ -931,11 +939,11 @@
             </div>
             {% endif %}
             <div class="blog-txt">
-               <p class="date"><small>By <span class="username">Admin</span></small> |
+               <p class="date"><small>By <span class="username">Invest-center</span></small> |
                   <small>{{ project.date }} </small> </p>
-               <h4 class="blog-title"><a href="blog-details.html">{{ project.title }}</a></h4>
+               <h4 class="blog-title"><a>{{ project.title }}</a></h4>
                <p class="blog-summary">{{ project.body }}</p>
-               <a href="blog-details.html" class="readmore-btn"><span>Read More</span></a>
+               <a href="{% url 'all' %}" class="readmore-btn"><span>Read More</span></a>
             </div>
          </div>
       </div>
@@ -1082,7 +1090,7 @@
           },
         },
         color: {
-          value: "#0090ff",
+          value: "#ffffff",
         },
         shape: {
           type: "circle",
@@ -1146,7 +1154,7 @@
         events: {
           onhover: {
             enable: true,
-            mode: "grab",
+            mode: "repulse",
           },
           onclick: {
             enable: true,

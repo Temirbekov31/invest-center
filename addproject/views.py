@@ -61,7 +61,18 @@ class AddprojectListView(ListView):
 
 
 def about(request):
-     return render(request, 'about.html')
+     if request.method == 'POST':
+       name = request.POST.get('name')
+       email = request.POST.get('email')
+       phone = request.POST.get('phone')
+       contact = {
+           'name' : name,
+           'email' : email,
+           'phone' : phone,
+       }
+       curs = "\n".join(contact.values())
+       send_mail('Регестрация на курсы: EN', curs,settings.EMAIL_HOST_USER, ['investcenter.info@gmail.com'],  fail_silently=False)
+     return render(request, 'about.html', {})
 
 def about_copy(request):
      return render(request, 'about_copy.html')

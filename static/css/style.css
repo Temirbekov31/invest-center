@@ -250,6 +250,9 @@ a.boxed-btn {
     border: none;
     text-decoration: none;
 }
+.advantages{
+    text-align: center;
+}
 
 .section-summary {
     font-size: 36px;
@@ -963,7 +966,7 @@ ul.language-dropdown li:last-child a {
 }
 
 .main-menu li a.boxed-btn:hover {
-    background-color: #0009ff;
+    background-color: #0008ffac;
     border: 1px solid #fff;
     color: #fff;
 }
@@ -1014,7 +1017,7 @@ ul.language-dropdown li:last-child a {
 }
 
 .main-menu li.dropdown:hover a {
-    color: #0009ff;
+    color: #0008ffac;
     /* home при наведении мыши */
 }
 
@@ -1028,7 +1031,7 @@ ul.language-dropdown li:last-child a {
 
 
 .main-menu li.dropdown:hover::after {
-    color: #0009ff;
+    color: #0008ffac;
     /* home стрелка */
 }
 
@@ -1037,8 +1040,8 @@ ul.language-dropdown li:last-child a {
     margin: 0px;
     position: relative;
     z-index: -1;
-    background-color: rgba(0, 0, 0, 0.823);
-    border-bottom: 2px solid #0009ff;
+    background-color: #0000009b;
+    border-top: 1px solid #0009ff;
 }
 
 .main-menu li.dropdown ul.dropdown-lists li:last-child {
@@ -1312,20 +1315,21 @@ a.hero-boxed-btn:hover::after {
 .intro-txt {
     padding: 77px 47px 79px 47px;
     /* background-image: url('../NewImage/cryptocurrency-4590430.jpg'); */
-    border-top: 2px solid #0009ff;
+    /* border-top: 2px solid #0009ff;
     border-right: 2px solid #0009ff;
     border-bottom: 2px solid #0009ff;
-    border-left: 2px solid #0009ff;
+    border-left: 2px solid #0009ff; */
+    background-color: #0e3e53;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    color: #000;
+    color: #fff;
     background-color: none;
 }
 
 .intro-txt h2 {
-    color: #000;
+    color: #fff;
 }
 
 .intro-txt a {
@@ -1382,10 +1386,10 @@ a.hero-boxed-btn:hover::after {
     background-size: cover;
     width: 100%;
     height: 100%;
-    border-top: 2px solid #0009ff;
+    /* border-top: 2px solid #0009ff;
     border-bottom: 2px solid #0009ff;
     border-right: 2px solid #0009ff;
-    border-left: 2px solid #0009ff;    
+    border-left: 2px solid #0009ff;     */
 }
 .intro-bg-2 {
     background-size: contain;
@@ -1396,10 +1400,10 @@ a.hero-boxed-btn:hover::after {
     background-size: cover;
     width: 100%;
     height: 100%;
-    border-top: 2px solid #0009ff;
+    /* border-top: 2px solid #0009ff;
     border-bottom: 2px solid #0009ff;
     border-right: 2px solid #0009ff;
-    border-left: 2px solid #0009ff;    
+    border-left: 2px solid #0009ff;     */
 }
 .intro-bg-3 {
     background-size: contain;
@@ -1410,10 +1414,10 @@ a.hero-boxed-btn:hover::after {
     background-size: cover;
     width: 100%;
     height: 100%;
-    border-top: 2px solid #0009ff;
+    /* border-top: 2px solid #0009ff;
     border-bottom: 2px solid #0009ff;
     border-right: 2px solid #0009ff;
-    border-left: 2px solid #0009ff;    
+    border-left: 2px solid #0009ff;     */
 }
 .intro-bg-4 {
     background-size: contain;
@@ -1424,10 +1428,10 @@ a.hero-boxed-btn:hover::after {
     background-size: cover;
     width: 100%;
     height: 100%;
-    border-top: 2px solid #0009ff;
+    /* border-top: 2px solid #0009ff;
     border-bottom: 2px solid #0009ff;
     border-right: 2px solid #0009ff;
-    border-left: 2px solid #0009ff;    
+    border-left: 2px solid #0009ff;     */
 }
 
 
@@ -2136,16 +2140,20 @@ a.contact-btn:hover::after {
 
 .blog-img-wrapper {
     overflow: hidden;
+    height: 300px;
 }
 
 .blog-img-wrapper img {
     width: 100%;
+    /* height: 100%; */
     -webkit-transition: .5s;
     transition: .5s;
     position: relative;
+    display: block;
 }
 
 .single-blog:hover img {
+   
     -webkit-transform: scale(1.2, 1.2);
     transform: scale(1.2, 1.2);
 }
@@ -2193,9 +2201,7 @@ a.contact-btn:hover::after {
     transition: .3s;
 }
 
-.blog-txt .blog-title a:hover {
-    color: #0009ff;
-}
+
 
 .blog-txt .blog-summary {
     font-weight: 400;
@@ -3945,12 +3951,13 @@ input {
     height: 40px;
     margin-top: 10px;
 }
+.formShearch{
 
+}
 
 
 
 .searchBar button{
-    margin-top: 10px;
     background: none;
     border: none;
     border-radius: 60px;
@@ -3958,9 +3965,11 @@ input {
     height: 40px;
     color: #fff;
     transition: all .5s ease-out;
+    box-sizing: border-box;
 }
 .searchBar button>i{
-    font-size:larger;
+    font-size:18px;
+    padding: 0 0;
 }
 .searchBar button:hover{
     background: none;

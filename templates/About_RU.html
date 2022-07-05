@@ -159,48 +159,35 @@
 			
 			events: [
 				{
-					title: 'All Day Event',
+					title: 'Курсы',
 					start: new Date(y, m, 1)
 				},
 				{
 					id: 999,
-					title: 'Repeating Event',
+					title: 'Мероприятии',
 					start: new Date(y, m, d-3, 16, 0),
 					allDay: false,
 					className: 'info'
 				},
 				{
 					id: 999,
-					title: 'Repeating Event',
+					title: 'Курсы 2',
 					start: new Date(y, m, d+4, 16, 0),
 					allDay: false,
 					className: 'info'
 				},
 				{
-					title: 'Meeting',
+					title: '!!!!',
 					start: new Date(y, m, d, 10, 30),
 					allDay: false,
 					className: 'important'
 				},
 				{
-					title: 'Lunch',
+					title: '!!!!!!',
 					start: new Date(y, m, d, 12, 0),
 					end: new Date(y, m, d, 14, 0),
 					allDay: false,
 					className: 'important'
-				},
-				{
-					title: 'Birthday Party',
-					start: new Date(y, m, d+1, 19, 0),
-					end: new Date(y, m, d+1, 22, 30),
-					allDay: false,
-				},
-				{
-					title: 'Click for Google',
-					start: new Date(y, m, 28),
-					end: new Date(y, m, 29),
-					url: 'https://ccp.cloudaccess.net/aff.php?aff=5188',
-					className: 'success'
 				}
 			],			
 		});
@@ -313,13 +300,7 @@ box-shadow: 0px 0px 21px 2px rgba(0,0,0,0.18);
                         <a class="dropdown-btn" href="{% url 'home_ru' %}">Главная</a>
                      </li>
                      <li><a href="{% url 'about_ru' %}">О компании</a></li>
-                     <!-- <li class="dropdown">
-                        <a class="dropdown-btn" href="{% url 'services' %}">Services</a>
-                        <ul class="dropdown-lists">
-                           <li><a href="{% url 'services' %}">Services</a></li>
-                           <li><a href="{% url 'service_details' %}">Service Details</a></li>
-                        </ul>
-                     </li> -->
+
                      <li class="dropdown">
                         <a class="dropdown-btn" href="{% url 'all_ru' %}">проекты</a>
                         <ul class="dropdown-lists">
@@ -333,13 +314,6 @@ box-shadow: 0px 0px 21px 2px rgba(0,0,0,0.18);
                            </li>
                         </ul>
                      </li>
-                     <!-- <li class="dropdown">
-                        <a class="dropdown-btn" href="{% url 'blogs' %}">Blogs</a>
-                        <ul class="dropdown-lists">
-                           <li><a href="{% url 'blogs' %}">Blogs</a></li>
-                           <li><a href="{% url 'blog_details' %}">Blog Details</a></li>
-                        </ul>
-                     </li> -->
                      <li><a href="{% url 'contact_ru' %}">Контакты<a></li>
                      <li>
                         <a href="{% url 'applicants_ru' %}" class="boxed-btn">Отправить заявку</a>
@@ -393,7 +367,7 @@ box-shadow: 0px 0px 21px 2px rgba(0,0,0,0.18);
    </div>
 
       <!--end New Calendar-->
-      <div class="container mt-5 btnCal d-flex justify-content-around">
+      <div class="container mt-5 mb-5 btnCal d-flex justify-content-around ">
          <button class="btnforCal" type="button" class="btn btn-mm" data-toggle="modal" data-target="#exampleModal">Регистрация</button>
          <button class="btnforCal"  type="button" class="btn btn-mm" data-toggle="modal" data-target="#exampleModal1">Подробнее</button>
       </div>
@@ -459,7 +433,7 @@ box-shadow: 0px 0px 21px 2px rgba(0,0,0,0.18);
       </div>
    </div>
    <!--Конец модал Готовые проекты-->
-   <div class="container">
+   {% comment %} <div class="container">
       <div class="workWell-txt">
          <div class="well-title text-center mt-5" >
             <h1>Готовые проекты</h1>
@@ -611,10 +585,10 @@ box-shadow: 0px 0px 21px 2px rgba(0,0,0,0.18);
           >Посмотреть проекты</a
         >
       </div>
-    </section></div>
+    </section></div> {% endcomment %}
 
    <!--    team section start   -->
-   <div class="container">
+   {% comment %} <div class="container">
       <div class="team-section">
          <div class="team-content">
             <div class="container">
@@ -958,7 +932,7 @@ box-shadow: 0px 0px 21px 2px rgba(0,0,0,0.18);
                         </div>
                      </div>
                   </div>
-               </div>
+               </div>{% endcomment %}
 
 
 
@@ -966,7 +940,7 @@ box-shadow: 0px 0px 21px 2px rgba(0,0,0,0.18);
             </div>
          </div>
       </div>
-   </div>
+   </div> 
    <!--    team section end   -->
 
 
